@@ -147,7 +147,7 @@ $app->post('/verify-attributes', function (Request $request) use ($app, $options
     $sid = $app['session']->getId();
     $uid = $attrs[$options['irma_attribute_id']];
     $app['session']->set('authn', array('username' => $uid));
-    $app['monolog']->addInfo(sprintf("[%s] Verified uid '%s' (%s).", $sid, $uid));
+    $app['monolog']->addInfo(sprintf("[%s] Verified uid '%s'", $sid, $uid));
 
     return new Response("OK");
 });
