@@ -142,8 +142,10 @@ $app->get('/sso', function (Request $request) use ($config, $app) {
     }
 
     $nameid = $samlrequest->getNameId();
+    if($nameid) $app['monolog']->addInfo(sprintf("NameID is '%s' .", $nameid->value));
+
 //    $request_data['nameid'] = $nameid['Value'];
-    $request_data['nameid'] = $nameid->value;
+    $request_data['nameid'] = $nameid ? $nameid->value : null;
 
     $request_data['id'] = $samlrequest->getId();
 
