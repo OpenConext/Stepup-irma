@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "36869962d457f8fb00efa969a8656276",
+    "content-hash": "2076fda94f055d1c9ad1a6d10d1e9fa9",
     "packages": [
         {
             "name": "firebase/php-jwt",
@@ -339,16 +339,16 @@
         },
         {
             "name": "simplesamlphp/saml2",
-            "version": "dev-master",
+            "version": "v3.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/simplesamlphp/saml2.git",
-                "reference": "af52ace51808b6c107dfa0750a2be043b71073d1"
+                "reference": "e9786e2e47971b9e3684391778d2c489e4725f26"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simplesamlphp/saml2/zipball/af52ace51808b6c107dfa0750a2be043b71073d1",
-                "reference": "af52ace51808b6c107dfa0750a2be043b71073d1",
+                "url": "https://api.github.com/repos/simplesamlphp/saml2/zipball/e9786e2e47971b9e3684391778d2c489e4725f26",
+                "reference": "e9786e2e47971b9e3684391778d2c489e4725f26",
                 "shasum": ""
             },
             "require": {
@@ -383,7 +383,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "LGPL-2.1"
+                "LGPL-2.1-or-later"
             ],
             "authors": [
                 {
@@ -392,7 +392,7 @@
                 }
             ],
             "description": "SAML2 PHP library from SimpleSAMLphp",
-            "time": "2018-01-16T11:50:28+00:00"
+            "time": "2018-01-26T07:55:28+00:00"
         },
         {
             "name": "symfony/config",
@@ -1147,9 +1147,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "simplesamlphp/saml2": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
