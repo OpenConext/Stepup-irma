@@ -2,8 +2,7 @@
 
 A SAML Stepup Provider for IRMA
 
-
-# Install
+# Installation
 
 Install dependencies (php, ntp, etc), eg for ubuntu 16.04:
 
@@ -34,7 +33,7 @@ Install stepup-irma:
 	cd Stepup-irma
 	composer install
 
-# Configure
+# Configuration
 
 ## Web server
 
@@ -71,7 +70,7 @@ $option['irma_keyid'] = "example";
 $option['irma_issuer'] = "Example Organisation";
 ```
 
-## SAML config
+## SAML configuration
 
 SAML configuration is stored in the file `config.php`. Override settings in the file `local_config.php`.
 
@@ -95,12 +94,8 @@ $config['sp']['https://sa-gw.test2.surfconext.nl/gssp/irma/metadata'] = array(
 );
 ```
 
+# Testing
 
-Run
-===
-
-Use the built-in web server of php 5.4+ to run from the command line:
+Instead of Apache you can also use the built-in web server of php 5.4+ and run from the command line:
 
         php -S ip:port -t www
-
-
