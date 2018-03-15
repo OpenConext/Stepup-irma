@@ -2,7 +2,7 @@
 
 A SAML Stepup Provider for IRMA
 
-# Installation
+# Install
 
 Install dependencies (php, ntp, etc), eg for ubuntu 16.04:
 
@@ -33,11 +33,11 @@ Install stepup-irma:
 	cd Stepup-irma
 	composer install
 
-# Configuration
+# Configure
 
 ## Web server
 
-edit your apache site config, eg `/etc/apache2/sites-enabled/000-default-le-ssl.conf` and sert the `DocumentRoot` with appropriate permissions, for instance:
+Edit your apache site config, eg `/etc/apache2/sites-enabled/000-default-le-ssl.conf` and sert the `DocumentRoot` with appropriate permissions, for instance:
 
 	DocumentRoot /opt/Stepup-irma/www
 
@@ -52,7 +52,7 @@ Restart Apache
 
 	service apache2 restart
 
-## IRMA configuration
+## Configure IRMA 
 
 IRMA configuration is stored in the file `options.php`. Override settings in the file `local_options.php`.
 
@@ -70,7 +70,7 @@ $option['irma_keyid'] = "example";
 $option['irma_issuer'] = "Example Organisation";
 ```
 
-## SAML configuration
+## Configure SAML
 
 SAML configuration is stored in the file `config.php`. Override settings in the file `local_config.php`.
 
@@ -78,7 +78,7 @@ Generate SAML signing key (`key.pem`) and certificate (`cert.pem`).
 
 	openssl req -x509 -sha256 -nodes -days 365 -subj '/CN=SAML signing' -newkey rsa:2048 -keyout key.pem -out cert.pem
 
-retrieve the SAML signing certificate from the SP gateway and store it in a file `gateway_irma_sp.crt.pem`
+Retrieve the SAML signing certificate from the SP gateway and store it in a file `gateway_irma_sp.crt.pem`
 
 	curl -s https://sa-gw.example.org/gssp/irma/metadata | \
 	xmllint --xpath '//*[local-name()="X509Certificate"]/text()' - | \
@@ -94,7 +94,7 @@ $config['sp']['https://sa-gw.test2.surfconext.nl/gssp/irma/metadata'] = array(
 );
 ```
 
-# Testing
+# Test
 
 Instead of Apache you can also use the built-in web server of php 5.4+ and run from the command line:
 
