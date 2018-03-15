@@ -78,11 +78,7 @@ Generate SAML signing key (`key.pem`) and certificate (`cert.pem`).
 
 	openssl req -x509 -sha256 -nodes -days 365 -subj '/CN=SAML signing' -newkey rsa:2048 -keyout key.pem -out cert.pem
 
-Retrieve the SAML signing certificate from the SP gateway and store it in a file `gateway_irma_sp.crt.pem`
-
-	curl -s https://sa-gw.example.org/gssp/irma/metadata | \
-	xmllint --xpath '//*[local-name()="X509Certificate"]/text()' - | \
-	base64 -d | openssl x509 -inform der -out gateway_irma_sp.crt.pem
+Retrieve the SAML signing certificate from the SP gateway and store it in a file `gateway_irma_sp.crt.pem` (note that the metadata hosted at https://sa-gw.example.org/gssp/irma/metadata is _IDP_ gateway metadata).
 
 Create a file `local_config.php` and include:
 
