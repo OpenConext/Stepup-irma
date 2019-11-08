@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2076fda94f055d1c9ad1a6d10d1e9fa9",
+    "content-hash": "0de4332336bd9ea650bfdf520bedd00a",
     "packages": [
         {
             "name": "firebase/php-jwt",
@@ -222,23 +222,21 @@
         },
         {
             "name": "robrichards/xmlseclibs",
-            "version": "3.0.0",
+            "version": "3.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/robrichards/xmlseclibs.git",
-                "reference": "a29eb3100eb6c5a427d6a3f9e61aff37492405ae"
+                "reference": "0a53d3c3aa87564910cae4ed01416441d3ae0db5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/robrichards/xmlseclibs/zipball/a29eb3100eb6c5a427d6a3f9e61aff37492405ae",
-                "reference": "a29eb3100eb6c5a427d6a3f9e61aff37492405ae",
+                "url": "https://api.github.com/repos/robrichards/xmlseclibs/zipball/0a53d3c3aa87564910cae4ed01416441d3ae0db5",
+                "reference": "0a53d3c3aa87564910cae4ed01416441d3ae0db5",
                 "shasum": ""
             },
             "require": {
-                "php": ">= 5.6"
-            },
-            "suggest": {
-                "ext-openssl": "OpenSSL extension"
+                "ext-openssl": "*",
+                "php": ">= 5.4"
             },
             "type": "library",
             "autoload": {
@@ -258,7 +256,7 @@
                 "xml",
                 "xmldsig"
             ],
-            "time": "2017-05-25T15:25:34+00:00"
+            "time": "2019-11-05T11:44:22+00:00"
         },
         {
             "name": "silex/silex",
@@ -335,6 +333,7 @@
             "keywords": [
                 "microframework"
             ],
+            "abandoned": "symfony/flex",
             "time": "2017-04-30T16:26:54+00:00"
         },
         {
@@ -1151,5 +1150,8 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": []
+    "platform-dev": [],
+    "platform-overrides": {
+        "php": "5.6"
+    }
 }
